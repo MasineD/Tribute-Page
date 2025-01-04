@@ -1,0 +1,96 @@
+.Header, .Footer{
+    text-align: center;
+    justify-content: center;
+}
+#main{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#img-div{
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.MidSection h2{
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+#title{
+    font-size: 50px;
+   padding-top: 20px;
+   text-shadow: 15px 5px 10px aqua;
+}
+#item{
+    font-weight: 800;
+}
+ul{
+    justify-self: center;
+}
+/* Following the instructions */
+img{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+#image{
+    max-width: 100%;
+    height: auto;
+}
+span{
+    display: inline-block;
+}
+.Footer{
+    margin-top: 40px;
+}
+#ReadMore{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.Footer a:hover{
+    color: lime;
+    font-size: 28px;
+    transition: 0.5s;
+}
+#img-caption{
+    padding: 10px 0;
+}
+/* Animations */
+.Header p span{
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px lime;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text{
+    25%,100%{
+        display: none;
+    }
+}
+.Header p span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border: 2px solid lime;
+    border-top: none;
+    border-bottom: none;
+    color: lime;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+/* Filling the text */
+@keyframes fill-text{
+    10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
